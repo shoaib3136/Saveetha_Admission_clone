@@ -107,7 +107,7 @@ Maintain readability and layout integrity on both desktop and mobile.
 
 ## CSS Code:
 ```css
-/* styles.css */
+
 
 * {
   box-sizing: border-box;
@@ -241,7 +241,7 @@ button:hover {
   text-decoration: underline;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
@@ -270,7 +270,7 @@ button:hover {
 }
 
 .college-logo {
-  max-width: 380px; /* Increased from 280px */
+  max-width: 380px; 
   width: 100%;
   margin-bottom: 20px;
 }

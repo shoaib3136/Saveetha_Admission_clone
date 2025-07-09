@@ -1,93 +1,179 @@
+/* styles.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background: url('college-image (1).jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: url('college-image (1).jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-.overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    min-height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.logo {
-    width: 300px;
-    display: block;
-    margin: 0 auto 20px;
-}
-
-.form-container {
-    max-width: 400px;
-    background: white;
-    padding: 30px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    text-align: center;
-}
-
-.form-container h2 {
-    margin-bottom: 20px;
-    color: #002f6c;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.form-container {
+.left-section {
   flex: 1;
-  max-width: 450px;
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.college-logo {
+  max-width: 280px;
+  width: 100%;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.admission-form {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 10px;
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.admission-form h2 {
+  color: #002f6c;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.dropdowns input {
-    width: 48%;
-    margin: 1%;
+.admission-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
 }
 
-.captcha {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 15px 0;
+.admission-form input[type="text"],
+.admission-form input[type="email"],
+.admission-form input[type="tel"],
+.admission-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
+.captcha-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
 
+.captcha-box img {
+  height: 40px;
+}
 
-.checkbox {
-    font-size: 0.9rem;
-    display: block;
-    text-align: left;
-    margin: 10px 0;
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.checkbox-container input {
+  margin-top: 5px;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
-    background-color: orange;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e69500;
 }
 
 .login-note {
-    font-size: 0.85rem;
-    color: #333;
-    margin-top: 10px;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-note a {
+  color: #0047ab;
+  text-decoration: none;
+}
+
+.login-note a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .left-section,
+  .right-section {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .admission-form {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  .college-logo {
+    max-width: 180px;
+  }
+}
+.branding {
+  text-align: center;
+  color: white;
+}
+
+.college-logo {
+  max-width: 380px; /* Increased from 280px */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.industry-text h1 {
+  font-size: 2.5rem;
+  color: #ffde17;
+  margin-bottom: 10px;
+}
+
+.industry-text p {
+  font-size: 1.2rem;
+  margin: 4px 0;
+  color: #fff;
 }

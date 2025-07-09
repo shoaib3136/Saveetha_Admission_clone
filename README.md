@@ -39,42 +39,67 @@ Maintain readability and layout integrity on both desktop and mobile.
 
 ## HTML Code:
 ```html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saveetha Engineering College Admissions 2025</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saveetha Engineering College Admission Enquiry</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="overlay">
-        <header>
-            <img src="saveetha logo.png" alt="Saveetha Engineering College Logo" class="logo">
-        </header>
+  <section class="main-container">
+    <!-- Left Promotional Section -->
+    <div class="left-section">
+  <div class="branding">
+    <img src="Screenshot 2025-07-09 185405-Photoroom.png" alt="Saveetha Engineering College Logo" class="college-logo">
+    <div class="industry-text">
+      <h1>INDUSTRY 5.0</h1>
+      <p>Ready Curriculum Imparting</p>
+      <p><strong>21st Century Skills</strong></p>
+    </div>
+  </div>
+</div>
 
-         <div class="form-container">
-      <h2>Admissions Open 2025</h2>
-      <form>
-        <input type="text" placeholder="Enter Name *" required>
-        <input type="email" placeholder="Enter Email Address *" required>
-        <input type="tel" placeholder="Enter Mobile Number *" required>
-        <input type="password" placeholder="Any Password of Your Choice *" required>
-        <input type="text" placeholder="State *" required>
-        <input type="text" placeholder="City *" required>
-        <input type="text" placeholder="Course *" required>
-        <input type="text" placeholder="Specialization *" required>
-        <label class="checkbox">
-          <input type="checkbox" required>
-          I authorise Saveetha Engineering College to contact me via Email/SMS/WhatsApp/Call.
-        </label>
+    <!-- Right Form Section -->
+    <div class="right-section">
+      <form class="admission-form">
+        <h2>Admissions Open 2025</h2>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter Name *" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter Email Address *" required>
+
+        <label for="phone">Mobile Number</label>
+        <input type="tel" id="phone" placeholder="Enter Mobile Number *" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Any Password of Your Choice *" required>
+
+        <label for="state">State</label>
+        <input type="text" id="state" placeholder="State *" required>
+
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="City *" required>
+
+        <label for="course">Course</label>
+        <input type="text" id="course" placeholder="Course *" required>
+
+        <label for="specialization">Specialization</label>
+        <input type="text" id="specialization" placeholder="Specialization *" required>
+        <div class="checkbox-container">
+          <input type="checkbox" id="consent" required>
+          <label for="consent">I authorise Saveetha Engineering College to contact me via Email/SMS/WhatsApp/Call.</label>
+        </div>
 
         <button type="submit">APPLY NOW</button>
+
+        <p class="login-note">Already have an Account? <a href="#">Login</a> | <a href="#">Resend Verification Email</a></p>
       </form>
-      <p class="login-note">Already have an Account? <a href="#">Login</a> | <a href="#">Resend Verification Email</a></p>
     </div>
-    </div>
+  </section>
 </body>
 </html>
 
@@ -82,103 +107,190 @@ Maintain readability and layout integrity on both desktop and mobile.
 
 ## CSS Code:
 ```css
+/* styles.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background: url('college-image (1).jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: url('college-image (1).jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-.overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    min-height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.logo {
-    width: 300px;
-    display: block;
-    margin: 0 auto 20px;
-}
-
-.form-container {
-    max-width: 400px;
-    background: white;
-    padding: 30px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    text-align: center;
-}
-
-.form-container h2 {
-    margin-bottom: 20px;
-    color: #002f6c;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.form-container {
+.left-section {
   flex: 1;
-  max-width: 450px;
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.college-logo {
+  max-width: 280px;
+  width: 100%;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.admission-form {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 10px;
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.admission-form h2 {
+  color: #002f6c;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.dropdowns input {
-    width: 48%;
-    margin: 1%;
+.admission-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
 }
 
-.captcha {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 15px 0;
+.admission-form input[type="text"],
+.admission-form input[type="email"],
+.admission-form input[type="tel"],
+.admission-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
+.captcha-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
 
+.captcha-box img {
+  height: 40px;
+}
 
-.checkbox {
-    font-size: 0.9rem;
-    display: block;
-    text-align: left;
-    margin: 10px 0;
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.checkbox-container input {
+  margin-top: 5px;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
-    background-color: orange;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e69500;
 }
 
 .login-note {
-    font-size: 0.85rem;
-    color: #333;
-    margin-top: 10px;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 15px;
 }
+
+.login-note a {
+  color: #0047ab;
+  text-decoration: none;
+}
+
+.login-note a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .left-section,
+  .right-section {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .admission-form {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  .college-logo {
+    max-width: 180px;
+  }
+}
+.branding {
+  text-align: center;
+  color: white;
+}
+
+.college-logo {
+  max-width: 380px; /* Increased from 280px */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.industry-text h1 {
+  font-size: 2.5rem;
+  color: #ffde17;
+  margin-bottom: 10px;
+}
+
+.industry-text p {
+  font-size: 1.2rem;
+  margin: 4px 0;
+  color: #fff;
+}
+
 
 ```
 
 ## Output:
-![alt text](image.png)
+![alt text](image-1.png)
 ## Result:
 A landing page clone of Saveetha Engineering College’s Admission Enquiry form using HTML and CSS is designed successfully.

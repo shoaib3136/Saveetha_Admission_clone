@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saveetha Engineering College Admissions 2025</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saveetha Engineering College Admission Enquiry</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="overlay">
-        <header>
-            <img src="saveetha logo.png" alt="Saveetha Engineering College Logo" class="logo">
-        </header>
+  <section class="main-container">
+    <!-- Left Promotional Section -->
+    <div class="left-section">
+  <div class="branding">
+    <img src="Screenshot 2025-07-09 185405-Photoroom.png" alt="Saveetha Engineering College Logo" class="college-logo">
+    <div class="industry-text">
+      <h1>INDUSTRY 5.0</h1>
+      <p>Ready Curriculum Imparting</p>
+      <p><strong>21st Century Skills</strong></p>
+    </div>
+  </div>
+</div>
 
-         <div class="form-container">
-      <h2>Admissions Open 2025</h2>
-      <form>
-        <input type="text" placeholder="Enter Name *" required>
-        <input type="email" placeholder="Enter Email Address *" required>
-        <input type="tel" placeholder="Enter Mobile Number *" required>
-        <input type="password" placeholder="Any Password of Your Choice *" required>
-        <input type="text" placeholder="State *" required>
-        <input type="text" placeholder="City *" required>
-        <input type="text" placeholder="Course *" required>
-        <input type="text" placeholder="Specialization *" required>
-        <label class="checkbox">
-          <input type="checkbox" required>
-          I authorise Saveetha Engineering College to contact me via Email/SMS/WhatsApp/Call.
-        </label>
+    <!-- Right Form Section -->
+    <div class="right-section">
+      <form class="admission-form">
+        <h2>Admissions Open 2025</h2>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter Name *" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter Email Address *" required>
+
+        <label for="phone">Mobile Number</label>
+        <input type="tel" id="phone" placeholder="Enter Mobile Number *" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Any Password of Your Choice *" required>
+
+        <label for="state">State</label>
+        <input type="text" id="state" placeholder="State *" required>
+
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="City *" required>
+
+        <label for="course">Course</label>
+        <input type="text" id="course" placeholder="Course *" required>
+
+        <label for="specialization">Specialization</label>
+        <input type="text" id="specialization" placeholder="Specialization *" required>
+        <div class="checkbox-container">
+          <input type="checkbox" id="consent" required>
+          <label for="consent">I authorise Saveetha Engineering College to contact me via Email/SMS/WhatsApp/Call.</label>
+        </div>
 
         <button type="submit">APPLY NOW</button>
+
+        <p class="login-note">Already have an Account? <a href="#">Login</a> | <a href="#">Resend Verification Email</a></p>
       </form>
-      <p class="login-note">Already have an Account? <a href="#">Login</a> | <a href="#">Resend Verification Email</a></p>
     </div>
-    </div>
+  </section>
 </body>
 </html>

@@ -23,40 +23,66 @@
    
     <div class="right-section">
       <form class="admission-form">
-        <h2>Admissions Open 2025</h2>
+  <h2>Admissions Open 2025</h2>
 
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter Name *" required>
+  <div class="input-group">
+    <i class="fa fa-user icon"></i>
+    <input type="text" placeholder="Enter Name *" required>
+  </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter Email Address *" required>
+  <div class="input-group">
+    <i class="fa fa-envelope icon"></i>
+    <input type="email" placeholder="Enter Email Address *" required>
+  </div>
 
-        <label for="phone">Mobile Number</label>
-        <input type="tel" id="phone" placeholder="Enter Mobile Number *" required>
+  <div class="input-group">
+    <i class="fa fa-phone icon"></i>
+    <select class="country-code">
+      <option value="+91">+91</option>
+      <!-- Add more if needed -->
+    </select>
+    <input type="tel" placeholder="Enter Mobile Number *" required>
+  </div>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Any Password of Your Choice *" required>
+  <div class="input-group">
+    <i class="fa fa-lock icon"></i>
+    <input type="password" placeholder="Any Password of Your Choice *" required>
+  </div>
 
-        <label for="state">State</label>
-        <input type="text" id="state" placeholder="State *" required>
+  <div class="flex-inputs">
+    <div class="input-group">
+      <i class="fa fa-map-marker icon"></i>
+      <input type="text" placeholder="State *" required>
+    </div>
+    <div class="input-group">
+      <i class="fa fa-map icon"></i>
+      <input type="text" placeholder="City *" required>
+    </div>
+  </div>
 
-        <label for="city">City</label>
-        <input type="text" id="city" placeholder="City *" required>
+  <div class="flex-inputs">
+    <div class="input-group">
+      <i class="fa fa-book icon"></i>
+      <input type="text" placeholder="Course *" required>
+    </div>
+    <div class="input-group">
+      <i class="fa fa-graduation-cap icon"></i>
+      <input type="text" placeholder="Specialization *" required>
+    </div>
+  </div>
 
-        <label for="course">Course</label>
-        <input type="text" id="course" placeholder="Course *" required>
+  
 
-        <label for="specialization">Specialization</label>
-        <input type="text" id="specialization" placeholder="Specialization *" required>
-        <div class="checkbox-container">
-          <input type="checkbox" id="consent" required>
-          <label for="consent">I authorise Saveetha Engineering College to contact me via Email/SMS/WhatsApp/Call.</label>
-        </div>
+  <div class="checkbox-container">
+    <input type="checkbox" id="consent" required>
+    <label for="consent">I authorise Saveetha Engineering College & its representatives to contact me with updates and notifications via Email/SMS/WhatsApp/Call. This will override DND/NDNC *</label>
+  </div>
 
-        <button type="submit">APPLY NOW</button>
+  <button type="submit">APPLY NOW ▶</button>
 
-        <p class="login-note">Already have an Account? <a href="#">Login</a> | <a href="#">Resend Verification Email</a></p>
-      </form>
+  <p class="login-note">Already have an Account? <a href="#">Login</a> | <a href="#">Resend Verification Email</a></p>
+</form>
+
     </div>
   </section>
 </body>

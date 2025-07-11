@@ -49,7 +49,7 @@ Maintain readability and layout integrity on both desktop and mobile.
 </head>
 <body>
   <section class="main-container">
-    <!-- Left Promotional Section -->
+   
     <div class="left-section">
   <div class="branding">
     <img src="Screenshot 2025-07-09 185405-Photoroom.png" alt="Saveetha Engineering College Logo" class="college-logo">
@@ -61,53 +61,77 @@ Maintain readability and layout integrity on both desktop and mobile.
   </div>
 </div>
 
-    <!-- Right Form Section -->
+   
     <div class="right-section">
       <form class="admission-form">
-        <h2>Admissions Open 2025</h2>
+  <h2>Admissions Open 2025</h2>
 
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter Name *" required>
+  <div class="input-group">
+    <i class="fa fa-user icon"></i>
+    <input type="text" placeholder="Enter Name *" required>
+  </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter Email Address *" required>
+  <div class="input-group">
+    <i class="fa fa-envelope icon"></i>
+    <input type="email" placeholder="Enter Email Address *" required>
+  </div>
 
-        <label for="phone">Mobile Number</label>
-        <input type="tel" id="phone" placeholder="Enter Mobile Number *" required>
+  <div class="input-group">
+    <i class="fa fa-phone icon"></i>
+    <select class="country-code">
+      <option value="+91">+91</option>
+     
+    </select>
+    <input type="tel" placeholder="Enter Mobile Number *" required>
+  </div>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Any Password of Your Choice *" required>
+  <div class="input-group">
+    <i class="fa fa-lock icon"></i>
+    <input type="password" placeholder="Any Password of Your Choice *" required>
+  </div>
 
-        <label for="state">State</label>
-        <input type="text" id="state" placeholder="State *" required>
+  <div class="flex-inputs">
+    <div class="input-group">
+      <i class="fa fa-map-marker icon"></i>
+      <input type="text" placeholder="State *" required>
+    </div>
+    <div class="input-group">
+      <i class="fa fa-map icon"></i>
+      <input type="text" placeholder="City *" required>
+    </div>
+  </div>
 
-        <label for="city">City</label>
-        <input type="text" id="city" placeholder="City *" required>
+  <div class="flex-inputs">
+    <div class="input-group">
+      <i class="fa fa-book icon"></i>
+      <input type="text" placeholder="Course *" required>
+    </div>
+    <div class="input-group">
+      <i class="fa fa-graduation-cap icon"></i>
+      <input type="text" placeholder="Specialization *" required>
+    </div>
+  </div>
 
-        <label for="course">Course</label>
-        <input type="text" id="course" placeholder="Course *" required>
+  
 
-        <label for="specialization">Specialization</label>
-        <input type="text" id="specialization" placeholder="Specialization *" required>
-        <div class="checkbox-container">
-          <input type="checkbox" id="consent" required>
-          <label for="consent">I authorise Saveetha Engineering College to contact me via Email/SMS/WhatsApp/Call.</label>
-        </div>
+  <div class="checkbox-container">
+    <input type="checkbox" id="consent" required>
+    <label for="consent">I authorise Saveetha Engineering College & its representatives to contact me with updates and notifications via Email/SMS/WhatsApp/Call. This will override DND/NDNC *</label>
+  </div>
 
-        <button type="submit">APPLY NOW</button>
+  <button type="submit">APPLY NOW ▶</button>
 
-        <p class="login-note">Already have an Account? <a href="#">Login</a> | <a href="#">Resend Verification Email</a></p>
-      </form>
+  <p class="login-note">Already have an Account? <a href="#">Login</a> | <a href="#">Resend Verification Email</a></p>
+</form>
+
     </div>
   </section>
 </body>
 </html>
-
 ```
 
 ## CSS Code:
 ```css
-
 
 * {
   box-sizing: border-box;
@@ -123,12 +147,16 @@ body {
   background-size: cover;
 }
 
+
 .main-container {
   display: flex;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(67, 60, 60, 0.6);
+  justify-content: center;
+  align-items: center;
 }
+
 
 .left-section {
   flex: 1;
@@ -138,9 +166,27 @@ body {
   padding: 20px;
 }
 
+.branding {
+  text-align: center;
+  color: white;
+}
+
 .college-logo {
-  max-width: 280px;
+  max-width: 380px;
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.industry-text h1 {
+  font-size: 2.5rem;
+  color: #ffde17;
+  margin-bottom: 10px;
+}
+
+.industry-text p {
+  font-size: 1.2rem;
+  margin: 4px 0;
+  color: #fff;
 }
 
 .right-section {
@@ -151,52 +197,74 @@ body {
   padding: 20px;
 }
 
+
 .admission-form {
   width: 100%;
   max-width: 420px;
-  background-color: #ffffff;
+  background-color: rgba(73, 67, 67, 0.6); 
+  backdrop-filter: blur(3px); 
   border-radius: 10px;
   padding: 30px;
+  color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;
-  max-height: 90vh;
+  overflow: hidden;
+  max-height: none;
 }
 
 .admission-form h2 {
-  color: #002f6c;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.admission-form label {
-  display: block;
-  margin-bottom: 6px;
+  font-size: 1.6rem;
   font-weight: bold;
-  font-size: 0.95rem;
+  color: #e1f905;
+  background-color: #a79c9c;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.admission-form input[type="text"],
-.admission-form input[type="email"],
-.admission-form input[type="tel"],
-.admission-form input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-}
 
-.captcha-box {
+.input-group {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.input-group .icon {
+  color: #ff5e00;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.input-group input,
+.input-group select {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  background: none;
+}
+
+.country-code {
+  width: 70px;
+  margin-right: 10px;
+}
+
+
+.flex-inputs {
+  display: flex;
   gap: 10px;
   margin-bottom: 15px;
 }
 
-.captcha-box img {
-  height: 40px;
+.flex-inputs .input-group {
+  flex: 1;
 }
+
+
+
 
 .checkbox-container {
   display: flex;
@@ -210,6 +278,7 @@ body {
   margin-top: 5px;
 }
 
+
 button {
   width: 100%;
   padding: 12px;
@@ -219,12 +288,14 @@ button {
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #e69500;
 }
+
 
 .login-note {
   font-size: 0.85rem;
@@ -233,7 +304,7 @@ button:hover {
 }
 
 .login-note a {
-  color: #0047ab;
+  color: #a8bad3;
   text-decoration: none;
 }
 
@@ -257,37 +328,12 @@ button:hover {
 
   .admission-form {
     max-width: 90vw;
-    max-height: 90vh;
   }
 
   .college-logo {
     max-width: 180px;
   }
 }
-.branding {
-  text-align: center;
-  color: white;
-}
-
-.college-logo {
-  max-width: 380px; 
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.industry-text h1 {
-  font-size: 2.5rem;
-  color: #ffde17;
-  margin-bottom: 10px;
-}
-
-.industry-text p {
-  font-size: 1.2rem;
-  margin: 4px 0;
-  color: #fff;
-}
-
-
 ```
 
 ## Output:

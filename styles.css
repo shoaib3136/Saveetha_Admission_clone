@@ -77,8 +77,9 @@ body {
 .admission-form h2 {
   font-size: 1.6rem;
   font-weight: bold;
-  color: #e1f905;
-  background-color: #a79c9c;
+  color: #fcf803;
+   
+  backdrop-filter: blur(3px); 
   padding: 12px;
   border-radius: 8px;
   text-align: center;
